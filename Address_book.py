@@ -28,6 +28,21 @@ for i in range(5):
    #print('%s %s, %s, %s, %s' % (adr_list[i].first_name, adr_list[i].surname, adr_list[i].firm_name, adr_list[i].status, adr_list[i].email))
    print(adr_list[i])
       
+by_first_name = sorted(adr_list, key=lambda AdrBook: AdrBook.first_name)
+print('by first name -------------')
+for i in range(5):
+   print(by_first_name[i])
+
+by_surname = sorted(adr_list, key=lambda AdrBook: AdrBook.surname)
+print('by surname -------------')
+for i in range(5):
+   print(by_surname[i])
+
+by_email = sorted(adr_list, key=lambda AdrBook: AdrBook.email)
+print('by email -------------')
+for i in range(5):
+   print(by_email[i])
+
    #print('-----------')
 
 
