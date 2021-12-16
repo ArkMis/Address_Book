@@ -18,6 +18,16 @@ class AdrBook:
         self.firm_name=firm_name
         self.status=status
         self.email=email
+        #variables
+        self.__len_addr=0
+
+   @property
+   def len_addr(self):
+        return len(self.first_name)+1+len(self.surname)
+
+   def contact(self):
+        return f'Kontaktuję się z {self.first_name} {self.surname} {self.status} {self.email}'
+        
 
 adr_list=[]
 
@@ -43,7 +53,12 @@ print('by email -------------')
 for i in range(5):
    print(by_email[i])
 
-   #print('-----------')
+print('')
+print('--- metoda contact ---')
+print(adr_list[1].contact())
+print(adr_list[1].len_addr)
+
+#print('-----------')
 
 
 
